@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimary"
+    android:elevation="@dimen/elevation_toolbar"
+    android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imgLauncherTb2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:paddingStart="0dp"
+            android:paddingEnd="32dp"
+            android:paddingBottom="16dp"
+            android:src="@drawable/ic_action_huella" />
+
+
+        <TextView
+            android:id="@+id/tvTituloTb2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/app_name"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/text_size_toolbar" />
+
+    </RelativeLayout>
+
+
+
+</androidx.appcompat.widget.Toolbar>

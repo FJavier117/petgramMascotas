@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/cv"
+    app:cardCornerRadius="@dimen/corner_radius"
+    android:layout_margin="@dimen/margin_cv">
+
+    <RelativeLayout
+        android:id="@+id/rlCv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgCv"
+            android:contentDescription="@string/img_Cv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/lobo"
+            android:layout_centerHorizontal="true"
+            android:padding="@dimen/padding_img_cv"/>
+
+        <ImageButton
+            android:id="@+id/imgbLikeCv"
+            android:contentDescription="@string/img_Cv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_below="@id/imgCv"
+            android:padding="@dimen/padding_img_cv"
+            android:src="@drawable/hueso1"/>
+
+        <TextView
+            android:id="@+id/tvNombreCv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgCv"
+            android:layout_marginTop="@dimen/margin_top_tv"
+            android:layout_toEndOf="@id/imgbLikeCv"
+            android:text="@string/tv_nombre_mascota" />
+
+        <ImageView
+            android:id="@+id/imgConteoCv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:padding="@dimen/padding_img_cv"
+            android:layout_below="@id/imgCv"
+            android:src="@drawable/hueso2" />
+
+        <TextView
+            android:id="@+id/tvConteoCv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgCv"
+            android:layout_marginTop="@dimen/margin_top_tv"
+            android:layout_toStartOf="@id/imgConteoCv"
+            android:text="@string/tv_conteo_like" />
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
