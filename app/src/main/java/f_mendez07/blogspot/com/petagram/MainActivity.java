@@ -76,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
         mascotas.add(new Mascotas(R.drawable.perro1,getResources().getString(R.string.perro),"3"));
         mascotas.add(new Mascotas(R.drawable.cebra,getResources().getString(R.string.cebra),"3"));
         mascotas.add(new Mascotas(R.drawable.lobo,getResources().getString(R.string.lobo),"2"));
-        mascotas.add(new Mascotas(R.drawable.oso,getResources().getString(R.string.oso),"1"));
+        mascotas.add(new Mascotas(R.drawable.oso,getResources().getString(R.string.oso),"3"));
+        mascotas.add(new Mascotas(R.drawable.buho,getResources().getString(R.string.buho),"1"));
     }
 }

@@ -61,6 +61,8 @@ public class MascotasFavoritos extends AppCompatActivity {
         listaMascotasFavoritas.add(new Mascotas(R.drawable.leon,getResources().getString(R.string.leon),"5"));
         listaMascotasFavoritas.add(new Mascotas(R.drawable.perro1,getResources().getString(R.string.perro),"3"));
         listaMascotasFavoritas.add(new Mascotas(R.drawable.cebra,getResources().getString(R.string.cebra),"3"));
+        listaMascotasFavoritas.add(new Mascotas(R.drawable.lobo,getResources().getString(R.string.lobo),"2"));
+        listaMascotasFavoritas.add(new Mascotas(R.drawable.oso,getResources().getString(R.string.oso),"3"));
     }
 
 
