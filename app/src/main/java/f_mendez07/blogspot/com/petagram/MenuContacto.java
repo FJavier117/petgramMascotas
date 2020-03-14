@@ -67,10 +67,11 @@ public class MenuContacto extends AppCompatActivity {
             @Override
             public void run() {
                 try {
-                    GMailSender sender = new GMailSender("preregistrofacilitadores@gmail.com",
-                            "axqwezrt");
+                    //es necesario logear el correo que recibira los mensajes
+                    GMailSender sender = new GMailSender("aquiva el correo@gmail.com",
+                            "contraseña");
                     sender.senMail(nombre, mensaje,
-                            correo, "preregistrofacilitadores@gmail.com");
+                            correo, "correo que recibe los mensajes@gmail.com");
                 } catch (Exception e) {
                     Log.e("Correo enviado", e.getMessage(), e);
                 }
