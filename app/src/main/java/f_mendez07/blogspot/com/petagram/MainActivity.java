@@ -1,35 +1,28 @@
 package f_mendez07.blogspot.com.petagram;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
 
-import android.content.ClipData;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Html;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import org.jetbrains.annotations.NotNull;
+import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 
 import static androidx.appcompat.widget.Toolbar.*;
 
 public class MainActivity extends AppCompatActivity {
-    private ArrayList<Mascotas> mascotas;
-    private RecyclerView listaMascotas;
+
+    private TabLayout tabLayout;
+    private ViewPager viewPager;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,19 +30,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         miToolBar();
 
-        listaMascotas = findViewById(R.id.rcvMascotas);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
-        linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-        listaMascotas.setLayoutManager(linearLayoutManager);
-        inicializarLista();
-        inicializarAdaptador();
+        tabLayout = findViewById(R.id.tabLayout);
+        viewPager = findViewById(R.id.viewPager);
+
+        setUpViewPager();
 
 
     }
 
     public void miToolBar(){
         Toolbar miActionBarMain = findViewById(R.id.miToolBar);
-        miActionBarMain.inflateMenu(R.menu.menu);
+        miActionBarMain.inflateMenu(R.menu.menu_opciones);
 
         final ImageButton imgbActionTb = miActionBarMain.findViewById(R.id.imgbActionTb);
 
@@ -63,20 +54,42 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        miActionBarMain.setOnMenuItemClickListener(new OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                switch(item.getItemId()){
+                    case R.id.action_contacto:
+                        Intent intent1 = new Intent(MainActivity.this,MenuContacto.class);
+                        startActivity(intent1);
+                        break;
+                    case R.id.action_acerca:
+                        Intent intent2 = new Intent(MainActivity.this,MenuAcercaDe.class);
+                        startActivity(intent2);
+                        break;
+                    default:
+                        break;
+                }
+                return true;
+            }
+        });
     }
 
-    public void inicializarAdaptador(){
-        MascotasAdapter mascotasAdapter = new MascotasAdapter(mascotas, this);
-        listaMascotas.setAdapter(mascotasAdapter);
+
+    private ArrayList<Fragment> agregarFragments(){
+        ArrayList<Fragment> fragments = new ArrayList<>();
+        fragments.add(new MainReciclerViewFragment());
+        fragments.add(new PerfilReciclerViewFragment());
+        return fragments;
     }
 
-    public void inicializarLista(){
-        mascotas = new ArrayList<>();
-        mascotas.add(new Mascotas(R.drawable.leon,getResources().getString(R.string.leon),"5"));
-        mascotas.add(new Mascotas(R.drawable.perro1,getResources().getString(R.string.perro),"3"));
-        mascotas.add(new Mascotas(R.drawable.cebra,getResources().getString(R.string.cebra),"3"));
-        mascotas.add(new Mascotas(R.drawable.lobo,getResources().getString(R.string.lobo),"2"));
-        mascotas.add(new Mascotas(R.drawable.oso,getResources().getString(R.string.oso),"3"));
-        mascotas.add(new Mascotas(R.drawable.buho,getResources().getString(R.string.buho),"1"));
+    public void setUpViewPager(){
+        viewPager.setAdapter(new PageAdapter(getSupportFragmentManager(),1,agregarFragments()));
+        tabLayout.setupWithViewPager(viewPager);
+        tabLayout.getTabAt(0).setIcon(R.drawable.ic_tap_casa);
+        tabLayout.getTabAt(1).setIcon(R.drawable.ic_tap_perro);
+
     }
+
+
+
 }

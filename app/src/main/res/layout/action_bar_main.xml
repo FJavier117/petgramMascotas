@@ -6,7 +6,8 @@
     android:background="@color/colorPrimary"
     android:elevation="@dimen/elevation_toolbar"
     android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    app:layout_scrollFlags="scroll|enterAlways">
 
     <RelativeLayout
         android:layout_width="match_parent"

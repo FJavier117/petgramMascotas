@@ -8,9 +8,10 @@
 
     <include
         android:id="@+id/miToolBarDos"
-        layout="@layout/action_bar_activity_dos">
+        layout="@layout/action_bar_dos">
     </include>
 
+    <!--Aqui se muestra em cardView principal de las mascotas-->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcvMascotasFavoritas"
         android:layout_below="@id/miToolBarDos"

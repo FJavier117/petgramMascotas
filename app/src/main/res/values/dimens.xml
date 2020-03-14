@@ -12,6 +12,10 @@
     <dimen name="paddin_tv_cv">16dp</dimen>
     <dimen name="divider_cv">1dp</dimen>
 
+    <!--margin general-->
+    <dimen name="margin">16dp</dimen>
+    <dimen name="padding">16dp</dimen>
+
     <!--dimens button-->
 
 

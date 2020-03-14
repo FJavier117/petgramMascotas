@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/cvPerfil"
+    app:cardCornerRadius="@dimen/corner_radius"
+    android:layout_margin="@dimen/margin_cv">
+
+    <RelativeLayout
+        android:id="@+id/rlCvPerfil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgCvPerfil"
+            android:contentDescription="@string/img_Cv"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/lobo"
+            android:layout_centerHorizontal="true"
+            android:padding="@dimen/padding_img_cv"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgCvPerfil"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvConteoCvPerfil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_conteo_like"/>
+
+            <ImageView
+                android:id="@+id/imgConteoCvPerfil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/hueso2" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

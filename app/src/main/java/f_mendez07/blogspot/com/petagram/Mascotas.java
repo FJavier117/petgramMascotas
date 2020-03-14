@@ -12,6 +12,11 @@ public class Mascotas {
         this.conteoMascotaFavorita = conteoMascotaFavorita;
     }
 
+    public Mascotas(int imgFoto, String conteoMascotaFavorita){
+        this.imgFoto = imgFoto;
+        this.conteoMascotaFavorita = conteoMascotaFavorita;
+    }
+
     public String getNombreMascota() {
         return nombreMascota;
     }

@@ -1,15 +1,11 @@
 <resources>
+    <!--Nombre de app-->
     <string name="app_name">Petagram</string>
-
 
     <!--Textos para el CARDVIEW-->
     <string name="tv_nombre_mascota">Nombre</string>
     <string name="tv_conteo_like">Conteo</string>
     <string name="img_Cv">SRC CardView</string>
-
-    <!--Textos para el menú-->
-    <string name="title_menu">Configuración</string>
-    <string name="title_img_strella">Favoritos</string>
 
     <!--Nombres de mascotas-->
     <string name="buho">Juan</string>
@@ -18,4 +14,21 @@
     <string name="oso">Pooh</string>
     <string name="cebra">Marty</string>
     <string name="leon">Alex</string>
+
+    <!--Textos para el menú-->
+    <string name="menu_contacto">Contacto</string>
+    <string name="menu_acerca_de">Acerca de</string>
+    <string name="menu_favorito">Favoritos</string>
+    <string name="menu_nombre">Nombre</string>
+    <string name="menu_email">Email</string>
+    <string name="menu_mensaje">Mensaje</string>
+    <string name="menu_enviar_comentario">Enviar comentario</string>
+
+
+
+    <!--Texto acerca de-->
+    <string name="desarrollado">Desarrollado por: Francisco Javier M.V.</string>
+    <string name="version">Versión: pre-alfa Milestone M102020</string>
+    <string name="year"> marzo 2020 México</string>
+    <string name="contacto">trasmc117@gmail.com</string>
 </resources>

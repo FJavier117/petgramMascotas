@@ -21,6 +21,14 @@
         <item name="android:background">@color/colorDivider</item>
     </style>
 
+    <!--Campo de texto-->
+    <style name="EditText" parent="Theme.AppCompat.Light">
+        <!-- cursor y línea normal-->
+        <item name="colorControlNormal">@color/colorAccent</item>
+        <!-- cursor y línea con foco-->
+        <item name="colorControlActivated">@color/colorPrimaryDark</item>
+    </style>
+
 
 
 </resources>
