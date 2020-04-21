@@ -16,6 +16,12 @@ import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 
+import f_mendez07.blogspot.com.petagram.adapter.PageAdapter;
+import f_mendez07.blogspot.com.petagram.fragment.MainRecyclerViewFragment;
+import f_mendez07.blogspot.com.petagram.fragment.PerfilRecyclerViewFragment;
+import f_mendez07.blogspot.com.petagram.menu.MenuAcercaDe;
+import f_mendez07.blogspot.com.petagram.menu.MenuContacto;
+
 import static androidx.appcompat.widget.Toolbar.*;
 
 public class MainActivity extends AppCompatActivity {
@@ -48,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(),"Mascotas favoritas",Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(getApplicationContext(),MascotasFavoritos.class);
+                Intent intent = new Intent(getApplicationContext(), MascotasCincoFav.class);
                 startActivity(intent);
                 //finish();
             }
@@ -59,11 +65,11 @@ public class MainActivity extends AppCompatActivity {
             public boolean onMenuItemClick(MenuItem item) {
                 switch(item.getItemId()){
                     case R.id.action_contacto:
-                        Intent intent1 = new Intent(MainActivity.this,MenuContacto.class);
+                        Intent intent1 = new Intent(MainActivity.this, MenuContacto.class);
                         startActivity(intent1);
                         break;
                     case R.id.action_acerca:
-                        Intent intent2 = new Intent(MainActivity.this,MenuAcercaDe.class);
+                        Intent intent2 = new Intent(MainActivity.this, MenuAcercaDe.class);
                         startActivity(intent2);
                         break;
                     default:
@@ -77,8 +83,8 @@ public class MainActivity extends AppCompatActivity {
 
     private ArrayList<Fragment> agregarFragments(){
         ArrayList<Fragment> fragments = new ArrayList<>();
-        fragments.add(new MainReciclerViewFragment());
-        fragments.add(new PerfilReciclerViewFragment());
+        fragments.add(new MainRecyclerViewFragment());
+        fragments.add(new PerfilRecyclerViewFragment());
         return fragments;
     }
 

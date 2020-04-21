@@ -19,20 +19,20 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MascotasFavoritos"
+            android:name=".MascotasCincoFav"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-        <activity android:name=".MenuAcercaDe"
+        <activity android:name=".menu.MenuAcercaDe"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity"/>
 
         </activity>
-        <activity android:name=".MenuContacto"
+        <activity android:name=".menu.MenuContacto"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

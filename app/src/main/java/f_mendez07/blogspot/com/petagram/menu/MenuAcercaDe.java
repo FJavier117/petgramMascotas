@@ -1,10 +1,12 @@
-package f_mendez07.blogspot.com.petagram;
+package f_mendez07.blogspot.com.petagram.menu;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
+
+import f_mendez07.blogspot.com.petagram.R;
 
 public class MenuAcercaDe extends AppCompatActivity {
 

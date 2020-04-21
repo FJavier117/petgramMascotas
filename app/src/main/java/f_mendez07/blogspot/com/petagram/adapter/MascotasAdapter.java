@@ -1,4 +1,4 @@
-package f_mendez07.blogspot.com.petagram;
+package f_mendez07.blogspot.com.petagram.adapter;
 
 import android.app.Activity;
 import android.view.LayoutInflater;
@@ -14,10 +14,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+import f_mendez07.blogspot.com.petagram.db.ConstructorDeMascotas;
+import f_mendez07.blogspot.com.petagram.pojo.Mascotas;
+import f_mendez07.blogspot.com.petagram.R;
+
 public class MascotasAdapter extends RecyclerView.Adapter<MascotasAdapter.MascotasViewHolder>{
    private ArrayList<Mascotas> mascotas;
    private Activity activity;
-  // private int clicks =0;
 
     public MascotasAdapter(ArrayList<Mascotas> mascotas, Activity activity) {
         this.mascotas = mascotas;
@@ -35,17 +38,19 @@ public class MascotasAdapter extends RecyclerView.Adapter<MascotasAdapter.Mascot
     public void onBindViewHolder(@NonNull final MascotasViewHolder mascotasViewHolder, final int position) {
         mascotasViewHolder.imgCv.setImageResource(mascotas.get(position).getImgFoto());
         mascotasViewHolder.tvNombreCv.setText(mascotas.get(position).getNombreMascota());
-        mascotasViewHolder.tvConteoCv.setText(mascotas.get(position).getConteoMascotaFavorita());
+        mascotasViewHolder.tvConteoCv.setText(String.valueOf(mascotas.get(position).getLikes()));
 
-        mascotasViewHolder.imgCv.setOnClickListener(new View.OnClickListener() {
+        mascotasViewHolder.imgbLikeCv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Toast.makeText(activity,"INFO ENVIADA",Toast.LENGTH_SHORT).show();
-
+                ConstructorDeMascotas constructorDeMascotas = new ConstructorDeMascotas(activity);
+                //damos like a la mascota y obtenemos la posición
+                constructorDeMascotas.darLikesMascotas(mascotas.get(position));
+                //mostramos en el textview el numero de likes
+                mascotasViewHolder.tvConteoCv.setText(String.valueOf(constructorDeMascotas.obternerLikesMascotas(mascotas.get(position))));
             }
         });
-
 
 
     }

@@ -1,6 +1,4 @@
-package f_mendez07.blogspot.com.petagram;
-
-import android.media.session.PlaybackState;
+package f_mendez07.blogspot.com.petagram.smtp;
 
 import java.security.Security;
 import java.util.Properties;

@@ -1,4 +1,4 @@
-package f_mendez07.blogspot.com.petagram;
+package f_mendez07.blogspot.com.petagram.adapter;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;

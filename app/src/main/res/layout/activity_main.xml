@@ -41,7 +41,7 @@
         android:layout_gravity="bottom|end"
         app:layout_anchorGravity="bottom|right|end"
         android:layout_margin="16dp"
-        android:src="@drawable/fab48"/>
+        android:src="@drawable/camara48"/>
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

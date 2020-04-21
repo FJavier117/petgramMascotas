@@ -1,4 +1,4 @@
-package f_mendez07.blogspot.com.petagram;
+package f_mendez07.blogspot.com.petagram.adapter;
 
 import android.app.Activity;
 import android.view.LayoutInflater;
@@ -12,11 +12,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class MascotasPerfilAdapter extends RecyclerView.Adapter<MascotasPerfilAdapter.MascotasPerfilViewHolder> {
+import f_mendez07.blogspot.com.petagram.R;
+import f_mendez07.blogspot.com.petagram.pojo.Mascotas;
+
+public class MascotasPerfilFragment extends RecyclerView.Adapter<MascotasPerfilFragment.MascotasPerfilViewHolder> {
     private ArrayList<Mascotas> mascotasPerfil;
     private Activity activityPerfil;
 
-    public MascotasPerfilAdapter(ArrayList<Mascotas> mascotasPerfil, Activity activityPerfil) {
+    public MascotasPerfilFragment(ArrayList<Mascotas> mascotasPerfil, Activity activityPerfil) {
         this.mascotasPerfil = mascotasPerfil;
         this.activityPerfil = activityPerfil;
     }
@@ -32,6 +35,7 @@ public class MascotasPerfilAdapter extends RecyclerView.Adapter<MascotasPerfilAd
         }
     }
 
+
     @NonNull
     @Override
     public MascotasPerfilViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -42,7 +46,7 @@ public class MascotasPerfilAdapter extends RecyclerView.Adapter<MascotasPerfilAd
     @Override
     public void onBindViewHolder(@NonNull MascotasPerfilViewHolder holder, int position) {
         holder.imgCvPerfil.setImageResource(mascotasPerfil.get(position).getImgFoto());
-        holder.tvCvConteoPerfil.setText(mascotasPerfil.get(position).getConteoMascotaFavorita());
+        holder.tvCvConteoPerfil.setText(String.valueOf(mascotasPerfil.get(position).getLikes()));
     }
 
     @Override

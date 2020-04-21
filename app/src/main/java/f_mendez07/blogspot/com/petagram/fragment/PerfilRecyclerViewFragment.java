@@ -1,4 +1,4 @@
-package f_mendez07.blogspot.com.petagram;
+package f_mendez07.blogspot.com.petagram.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,7 +13,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class PerfilReciclerViewFragment extends Fragment {
+import f_mendez07.blogspot.com.petagram.adapter.MascotasPerfilFragment;
+import f_mendez07.blogspot.com.petagram.pojo.Mascotas;
+import f_mendez07.blogspot.com.petagram.R;
+import f_mendez07.blogspot.com.petagram.adapter.MascotasCincoFavAdapter;
+
+public class PerfilRecyclerViewFragment extends Fragment {
     private ArrayList<Mascotas> mascotasPerfil;
     private RecyclerView listaMascotasPerfil;
 
@@ -37,18 +42,18 @@ public class PerfilReciclerViewFragment extends Fragment {
 
 
     public void inicializarAdaptador(){
-        MascotasPerfilAdapter mascotasPerfilAdapter = new MascotasPerfilAdapter(mascotasPerfil, getActivity());
-        listaMascotasPerfil.setAdapter(mascotasPerfilAdapter);
+        MascotasPerfilFragment mascotasPerfilFragment = new MascotasPerfilFragment(mascotasPerfil, getActivity());
+        listaMascotasPerfil.setAdapter(mascotasPerfilFragment);
     }
 
     public void inicializarLista(){
         mascotasPerfil = new ArrayList<>();
-        mascotasPerfil.add(new Mascotas(R.drawable.leon,"5"));
-        mascotasPerfil.add(new Mascotas(R.drawable.leon,"3"));
-        mascotasPerfil.add(new Mascotas(R.drawable.leon,"3"));
-        mascotasPerfil.add(new Mascotas(R.drawable.leon,"2"));
-        mascotasPerfil.add(new Mascotas(R.drawable.leon,"3"));
-        mascotasPerfil.add(new Mascotas(R.drawable.leon,"1"));
+        mascotasPerfil.add(new Mascotas(R.drawable.leon,5));
+        mascotasPerfil.add(new Mascotas(R.drawable.leon,3));
+        mascotasPerfil.add(new Mascotas(R.drawable.leon,3));
+        mascotasPerfil.add(new Mascotas(R.drawable.leon,2));
+        mascotasPerfil.add(new Mascotas(R.drawable.leon,3));
+        mascotasPerfil.add(new Mascotas(R.drawable.leon,1));
     }
 
 }

@@ -1,13 +1,9 @@
-package f_mendez07.blogspot.com.petagram;
+package f_mendez07.blogspot.com.petagram.menu;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 
-import android.Manifest;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -15,9 +11,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import f_mendez07.blogspot.com.petagram.smtp.GMailSender;
+import f_mendez07.blogspot.com.petagram.R;
+
 public class MenuContacto extends AppCompatActivity {
 
-    private static final int MY_PERMISSIONS_INTERNET =0 ;
+    private static final int MY_PERMISSIONS_INTERNET =0;
     private EditText edtNombre;
     private EditText edtCorreo;
     private EditText edtMensaje;

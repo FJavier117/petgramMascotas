@@ -1,4 +1,4 @@
-package f_mendez07.blogspot.com.petagram;
+package f_mendez07.blogspot.com.petagram.smtp;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
