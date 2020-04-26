@@ -3,22 +3,19 @@ package f_mendez07.blogspot.com.petagram.presentador;
 import android.content.Context;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
-import f_mendez07.blogspot.com.petagram.ComparaLikesMascotas;
-import f_mendez07.blogspot.com.petagram.db.BaseDeDatos;
 import f_mendez07.blogspot.com.petagram.db.ConstructorDeMascotas;
-import f_mendez07.blogspot.com.petagram.fragment.IMainRecyclerViewFragmentView;
+import f_mendez07.blogspot.com.petagram.vista_fragment.IMainRecyclerViewFragmentView;
 import f_mendez07.blogspot.com.petagram.pojo.Mascotas;
 
-public class Presentador implements IPresentador  {
+//presentador correspondiente a la clase MainRecyclerViewFragment
+public class RecyclerViewFragmentPresenter implements IRecyclerViewFragmentPresenter {
    private ConstructorDeMascotas mConstructorDeMascotas;
    private IMainRecyclerViewFragmentView mIMainRecyclerViewFragmentView;
    private Context mContext;
    private ArrayList<Mascotas> mMascotas;
-   private ArrayList<Mascotas> mMascotasPopulares;
 
-   public Presentador(IMainRecyclerViewFragmentView mIMainRecyclerViewFragmentView, Context mContext){
+   public RecyclerViewFragmentPresenter(IMainRecyclerViewFragmentView mIMainRecyclerViewFragmentView, Context mContext){
        this.mIMainRecyclerViewFragmentView = mIMainRecyclerViewFragmentView;
        this.mContext = mContext;
        obtenerMascotasDB();

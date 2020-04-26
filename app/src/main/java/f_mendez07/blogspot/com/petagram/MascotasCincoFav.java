@@ -16,7 +16,6 @@ import android.view.KeyEvent;
 import java.util.ArrayList;
 import java.util.Collections;
 
-import f_mendez07.blogspot.com.petagram.adapter.MascotasAdapter;
 import f_mendez07.blogspot.com.petagram.adapter.MascotasCincoFavAdapter;
 import f_mendez07.blogspot.com.petagram.db.BaseDeDatos;
 import f_mendez07.blogspot.com.petagram.db.ConstantesDB;

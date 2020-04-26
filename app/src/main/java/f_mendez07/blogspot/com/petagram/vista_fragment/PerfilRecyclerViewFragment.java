@@ -1,4 +1,4 @@
-package f_mendez07.blogspot.com.petagram.fragment;
+package f_mendez07.blogspot.com.petagram.vista_fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import f_mendez07.blogspot.com.petagram.adapter.MascotasPerfilFragment;
 import f_mendez07.blogspot.com.petagram.pojo.Mascotas;
 import f_mendez07.blogspot.com.petagram.R;
-import f_mendez07.blogspot.com.petagram.adapter.MascotasCincoFavAdapter;
 
 public class PerfilRecyclerViewFragment extends Fragment {
     private ArrayList<Mascotas> mascotasPerfil;

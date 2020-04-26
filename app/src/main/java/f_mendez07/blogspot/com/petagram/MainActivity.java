@@ -17,8 +17,8 @@ import com.google.android.material.tabs.TabLayout;
 import java.util.ArrayList;
 
 import f_mendez07.blogspot.com.petagram.adapter.PageAdapter;
-import f_mendez07.blogspot.com.petagram.fragment.MainRecyclerViewFragment;
-import f_mendez07.blogspot.com.petagram.fragment.PerfilRecyclerViewFragment;
+import f_mendez07.blogspot.com.petagram.vista_fragment.MainRecyclerViewFragment;
+import f_mendez07.blogspot.com.petagram.vista_fragment.PerfilRecyclerViewFragment;
 import f_mendez07.blogspot.com.petagram.menu.MenuAcercaDe;
 import f_mendez07.blogspot.com.petagram.menu.MenuContacto;
 

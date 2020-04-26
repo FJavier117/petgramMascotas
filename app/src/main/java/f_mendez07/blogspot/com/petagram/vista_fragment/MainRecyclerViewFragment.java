@@ -1,4 +1,4 @@
-package f_mendez07.blogspot.com.petagram.fragment;
+package f_mendez07.blogspot.com.petagram.vista_fragment;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -17,41 +17,42 @@ import java.util.ArrayList;
 import f_mendez07.blogspot.com.petagram.pojo.Mascotas;
 import f_mendez07.blogspot.com.petagram.R;
 import f_mendez07.blogspot.com.petagram.adapter.MascotasAdapter;
-import f_mendez07.blogspot.com.petagram.presentador.IPresentador;
-import f_mendez07.blogspot.com.petagram.presentador.Presentador;
+import f_mendez07.blogspot.com.petagram.presentador.IRecyclerViewFragmentPresenter;
+import f_mendez07.blogspot.com.petagram.presentador.RecyclerViewFragmentPresenter;
 
 public class MainRecyclerViewFragment extends Fragment implements IMainRecyclerViewFragmentView {
-    private ArrayList<Mascotas> mascotas;
-    private RecyclerView listaMascotas;
+    private ArrayList<Mascotas> listaMascotas;
+    private RecyclerView rvMascotas;
     private Context mContext;
 
-    private IPresentador presenter;
+    private IRecyclerViewFragmentPresenter presenter;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_reciclerview_main,container,false);
-        listaMascotas = v.findViewById(R.id.rcvMascotas);
+        rvMascotas = v.findViewById(R.id.rcvMascotas);
 
-        presenter = new Presentador(this,getContext());
+        presenter = new RecyclerViewFragmentPresenter(this,getContext());
 
         return v;
     }
 
+    //implementado métodos de la interfaz SE HA CFEADO LA VISTA
     @Override
     public void generarLinearLayoutVertical() {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-        listaMascotas.setLayoutManager(linearLayoutManager);
+        rvMascotas.setLayoutManager(linearLayoutManager);
     }
 
     @Override
-    public MascotasAdapter crearAdaptador(ArrayList<Mascotas> mascotas) {
-        return new MascotasAdapter(mascotas,getActivity());
+    public MascotasAdapter crearAdaptador(ArrayList<Mascotas> listaMascotas) {
+        return new MascotasAdapter(listaMascotas,getActivity());
     }
 
     @Override
     public void inicializarAdaptadorRV(MascotasAdapter adapter) {
-        listaMascotas.setAdapter(adapter);
+        rvMascotas.setAdapter(adapter);
     }
 }
